@@ -1,0 +1,2 @@
+
+-DCATKIN_DEVEL_PREFIX=/root/Desktop/sofar_project/devel -DCMAKE_INSTALL_PREFIX=/root/Desktop/sofar_project/install -G Unix Makefiles

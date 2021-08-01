@@ -1,0 +1,43 @@
+<launch>
+
+    <!-- Arguments -->
+    <!-- Map's dimensions -->
+    <arg name="map_xmax" default="10"/>
+    <arg name="map_ymax" default="10"/>
+
+    <!-- Person's initial position -->
+    <arg name="person_x" default="5"/>
+    <arg name="person_y" default="5"/>
+
+    <!-- Home definition -->
+    <arg name="home_x" default="2"/>
+    <arg name="home_y" default="2"/>
+
+    <!-- Time scale, e.g a value of 2 means 2x speed -->
+    <arg name="time_scale" default="1"/>
+
+    <!-- Parameters -->
+    <!-- Robot state -->
+    <param name="robot/state" value="normal" type="str"/>
+
+    <param name="map/xmax" value="$(arg map_xmax)"/>
+    <param name="map/ymax" value="$(arg map_ymax)"/>
+
+    <param name="person/x" value="$(arg person_x)"/>
+    <param name="person/y" value="$(arg person_y)"/>
+
+    <param name="home/x" value="$(arg home_x)"/>
+    <param name="home/y" value="$(arg home_y)"/>
+
+    <param name="time_scale" value="$(arg time_scale)"/>
+
+    <!-- The robot control service -->
+    <node name="robot_control" pkg="erl_first_assignment" type="robot_control_server.py" output="screen"/>
+
+    <!-- The finite state machine -->
+    <node name="robot_behaviour" pkg="erl_first_assignment" type="state_machine.py" output="screen" required="true"/>
+
+    <!-- The person module -->
+    <node name="person" pkg="erl_first_assignment" type="person.py" output="screen"/>
+
+</launch>
