@@ -1,5 +1,6 @@
-# Experimental Robotics Laboratory First Assignment
-This assignment consists in developing a simple software architecture to simulate the behaviour of a robot moving in a 2D plane. 
+# SOFAR PROJECT
+# Commanding MiRo with natural language
+This assignment consists in developing a simple software architecture to simulate the behaviour of a MIRO robot.
 The robot features three possible behaviours, i.e. Normal, Sleep and Play, and responds to user commands.
 
 ---
@@ -9,7 +10,7 @@ The robot features three possible behaviours, i.e. Normal, Sleep and Play, and r
 ### Component Diagram
 
 <p align="center"> 
-<img src="https://github.com/DavidePiccinini/ERL_First_Assignment/blob/master/diagrams/Component_Diagram.png?raw=true">
+<img src="Components Diagram.png">
 </p>
 
 The software architecture is based on **three main components**:
@@ -33,9 +34,9 @@ The software architecture is based on **three main components**:
 
 ### State Diagram
 
-<p align="center"> 
-<img src="https://github.com/DavidePiccinini/ERL_First_Assignment/blob/master/diagrams/State_Diagram.png?raw=true">
-</p>
+
+<img src="State Diagram.png">
+
 
 This is the state diagram that shows how the finite state machine works:
 
@@ -50,9 +51,8 @@ The state automatically transitions back to *Normal* after some time has passed.
 
 ### rqt_graph
 
-<p align="center"> 
-<img src="https://github.com/DavidePiccinini/ERL_First_Assignment/blob/master/diagrams/rosgraph.png?raw=true">
-</p>
+<img src="<rosgraph.png">
+
 
 ---
 
@@ -121,16 +121,6 @@ Going in alphabetical order:
     - `Component_Diagram.png`, `State_Diagram.png` and `rosgraph.png`
 
         The three diagrams shown in this README file.
-
-- **documentation**
-
-    - **html** and **latex**
-
-        Contain the output of *Doxygen*.
-
-    - `assignment.conf`
-
-        Configuration file used to run *Doxygen*.
 
 - **launch**
 
@@ -224,38 +214,3 @@ The **enviroment hypotheses** are:
 
 ---
 
-## System's Features
-
-The system satisfies all the requirements: the robot can transition corretly between states and executes the expected behaviour. Print functions placed in the components allow the user to monitor the robot and what is the person doing. The robot control also checks if the requested location is consistent with respect to the map's boundaries: if so, the robot moves, otherwise it doesnt.
-Having no sensing makes the system fast and reactive to commands.
-The robot control service can accomodate requests from one or more clients.
-
----
-
-## System's Limitations
-
-The system is dependent on a person which sends fixed commands according to the robot state, but in principle we would like to have a flexible system that can receive a wide range of commands and then reasons about what to do.
-Implementing the robot control as a service has its pros, but a future development may want to make the robot able to transition between states while it's reaching a destination: doing so would require modifying both the finite state machine and the robot control component.
-The code is almost entirely *ad hoc* for the use case considered: the components aren't modular enough to be re-usable for other applications, they would need almost certainly additional work to fit in.
-
----
-
-## Possible Technical Improvements
-
-A possible improvement would be removing the person component and instead develop two sensing components, one for voice commands and one for pointing gestures, which process respective user inputs and sends them to a reasoning component. The reasoning component would first check if the command is valid, then, depending on the robot's state, send data to the finite state machine. This would improve modularity and re-usability.
-Another improvement would be supporting other types of commands, for example the user could say the name of a key location, e.g. "Home", and the robot would go there. This is related to the reasoning component just mentioned and would require the user to add key locations via the ROS parameter server, which is already possible.
-
----
-
-## Authors and Contacts
-
-Davide Piccinini matricola S4404040
-Emails: 
-- piccio98dp@gmail.com
-- 4404040@studenti.unige.it
-
----
-
-## Doxygen Documentation
-
-[Doxygen pdf documentation](https://github.com/DavidePiccinini/ERL_First_Assignment/tree/master/documentation/latex/refman.pdf)
