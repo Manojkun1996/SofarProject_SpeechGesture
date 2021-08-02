@@ -51,7 +51,7 @@ The state automatically transitions back to *Normal* after some time has passed.
 
 ### rqt_graph
 
-<img src="<rosgraph.png">
+<img src="rosgraph.png">
 
 
 ---
