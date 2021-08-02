@@ -1,6 +1,6 @@
 # SOFAR PROJECT
 # Commanding MiRo with natural language
-This assignment consists in developing a simple software architecture to simulate the behaviour of a MIRO robot.
+This Project consists in developing a simple software architecture to simulate the behaviour of a MIRO robot.
 The robot features three possible behaviours, i.e. Normal, Sleep and Play, and responds to user commands.
 
 ---
