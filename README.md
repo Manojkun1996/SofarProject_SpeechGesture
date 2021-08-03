@@ -176,7 +176,7 @@ $ roscore
 
 You're almost ready to go! The last thing left to do is to run the launchfile:
 ```
-$ roslaunch erl_first_assignment first_assignment.launch home_x:=<value> home_y:=<value> map_xmax:=<value> map_ymax:=<value> person_x:=<value> person_y:=<value> time_scale:=<value>
+$ roslaunch speechgesture speech.launch home_x:=<value> home_y:=<value> map_xmax:=<value> map_ymax:=<value> person_x:=<value> person_y:=<value> time_scale:=<value>
 ```
 Where `<value>` stands for an integer you want the corresponding parameter to be set to (if you want to use default values simply delete one or more arguments).
 
