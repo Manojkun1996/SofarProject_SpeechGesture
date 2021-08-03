@@ -112,45 +112,6 @@ Custom ROS **parameters** are:
 
 ---
 
-## Packages and File List
-
-Going in alphabetical order:
-
-- **diagrams**
-
-    - `Component_Diagram.png`, `State_Diagram.png` and `rosgraph.png`
-
-        The three diagrams shown in this README file.
-
-- **launch**
-
-    - `speech.launch`
-
-        The launchfile used to setup the system, it's called with several arguments which will become ROS parameters.
-
-- **msg**
-
-    - `Location.msg` and `VoiceCommand.msg`
-
-        As mentioned in the *ROS messages and parameters* section, they are custom messages used for the pub/sub interface.
-
-- **scripts**
-
-    - `person.py`, `robot_control_server.py` and `state_machine.py`
-
-        The modules of the architecture, as described in the *System Architecture* section.
-
-- **srv**
-
-    - `MoveRobot.srv`
-
-        As mentioned in the *ROS messages and parameters* section, it's a custom message used for the sever/client interface.
-
-- `CMakeLists.txt` and `package.xml`
-
-    Necessary files to compile and run the system nodes.
-
----
 
 ## Installation and Running Procedure
 
@@ -176,7 +137,7 @@ $ roscore
 
 You're almost ready to go! The last thing left to do is to run the launchfile:
 ```
-$ roslaunch sofarproject_speechgesture speech.launch home_x:=<value> home_y:=<value> map_xmax:=<value> map_ymax:=<value> person_x:=<value> person_y:=<value> time_scale:=<value>
+$ roslaunch speechgesture speech.launch home_x:=<value> home_y:=<value> map_xmax:=<value> map_ymax:=<value> person_x:=<value> person_y:=<value> time_scale:=<value>
 ```
 Where `<value>` stands for an integer you want the corresponding parameter to be set to (if you want to use default values simply delete one or more arguments).
 
@@ -213,7 +174,4 @@ The **enviroment hypotheses** are:
 - The person position is constant throughout the entire robot operation.
 
 ---
-<<<<<<< HEAD
-=======
 
->>>>>>> b059d3a47265aa77d207a916da0e57e75bef3d39
