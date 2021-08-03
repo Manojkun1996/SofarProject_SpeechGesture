@@ -56,61 +56,6 @@ The state automatically transitions back to *Normal* after some time has passed.
 
 ---
 
-## ROS Messages and Parameters
-
-Custom ROS **messages** are:
-
-- **Location.msg**
-
-    ```
-    int64 x
-    int64 y
-    ```
-
-    Defines a location in the 2D environment by using two integers: it's used in the pub/sub interface for the *"pointing_gesture"* topic.
-
-- **VoiceCommand.msg**
-
-    ```
-    string command
-    ```
-
-    Defines a voice command that the user can send to the robot: it's used in the pub/sub interface for the *"voice_command"* topic.
-
-- **MoveRobot.srv**
-
-    ```
-    int64 x
-    int64 y
-    ---
-    bool goalReached
-    ```
-
-    Defines the request/response for the robot control server: the two integers define the location the robot has to move to and the bool tells whether the robot was able to reach its goal or not.
-
-Custom ROS **parameters** are:
-
-- `map/xmax` and `map/ymax`
-
-    Define the map's boundaries: the map will be a rectangle with sides defined by these two parameters.
-
-- `person/x` and `person/y`
-
-    Define the position of the person in the 2D plane.
-
-- `home/x` and `home/y`
-
-    Define the position of the key location "Home".
-
-- `time_scale`
-
-    Defines the speed at which the simulation goes: e.g. a value of 2 means 2x speed.
-
-- `robot/state`
-
-    Defines the state which the robot is currently in.
-
----
 
 
 ## Installation and Running Procedure
@@ -174,4 +119,6 @@ The **enviroment hypotheses** are:
 - The person position is constant throughout the entire robot operation.
 
 ---
-
+# AUTHOR
+Manoj Kunapalli (manoj.bemt.14@gmail.com)
+S4848891
