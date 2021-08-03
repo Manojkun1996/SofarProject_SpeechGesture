@@ -8,7 +8,7 @@ import rospy
 import time
 import random
 import math
-from erl_first_assignment.msg import Location, VoiceCommand
+from sofarproject_speechgesture.msg import Location, VoiceCommand
 
 ##
 # Publishes either a voice command or a location depending on the robot state.

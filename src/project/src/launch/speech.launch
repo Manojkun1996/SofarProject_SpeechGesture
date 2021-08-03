@@ -32,12 +32,12 @@
     <param name="time_scale" value="$(arg time_scale)"/>
 
     <!-- The robot control service -->
-    <node name="robot_control" pkg="erl_first_assignment" type="robot_control_server.py" output="screen"/>
+    <node name="robot_control" pkg="sofarproject_speechgesture" type="robot_control_server.py" output="screen"/>
 
     <!-- The finite state machine -->
-    <node name="robot_behaviour" pkg="erl_first_assignment" type="state_machine.py" output="screen" required="true"/>
+    <node name="robot_behaviour" pkg="sofarproject_speechgesture" type="state_machine.py" output="screen" required="true"/>
 
     <!-- The person module -->
-    <node name="person" pkg="erl_first_assignment" type="person.py" output="screen"/>
+    <node name="person" pkg="sofarproject_speechgesture" type="person.py" output="screen"/>
 
 </launch>

@@ -11,8 +11,8 @@ import smach_ros
 import time
 import random
 from std_msgs.msg import String
-from erl_first_assignment.srv import MoveRobot
-from erl_first_assignment.msg import Location, VoiceCommand
+from sofarproject_speechgesture.srv import MoveRobot
+from sofarproject_speechgesture.msg import Location, VoiceCommand
 
 ## The person's position
 personx = rospy.get_param("person/x")

@@ -6,7 +6,7 @@
 
 from __future__ import print_function
 
-from erl_first_assignment.srv import MoveRobot, MoveRobotResponse
+from sofarproject_speechgesture.srv import MoveRobot, MoveRobotResponse
 import rospy
 import time
 import random
