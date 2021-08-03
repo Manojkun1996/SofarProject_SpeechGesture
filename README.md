@@ -124,7 +124,7 @@ Going in alphabetical order:
 
 - **launch**
 
-    - `first_assignment.launch`
+    - `speech.launch`
 
         The launchfile used to setup the system, it's called with several arguments which will become ROS parameters.
 
@@ -176,7 +176,7 @@ $ roscore
 
 You're almost ready to go! The last thing left to do is to run the launchfile:
 ```
-$ roslaunch speechgesture speech.launch home_x:=<value> home_y:=<value> map_xmax:=<value> map_ymax:=<value> person_x:=<value> person_y:=<value> time_scale:=<value>
+$ roslaunch sofarproject_speechgesture speech.launch home_x:=<value> home_y:=<value> map_xmax:=<value> map_ymax:=<value> person_x:=<value> person_y:=<value> time_scale:=<value>
 ```
 Where `<value>` stands for an integer you want the corresponding parameter to be set to (if you want to use default values simply delete one or more arguments).
 
