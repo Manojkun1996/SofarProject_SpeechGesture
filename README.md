@@ -118,7 +118,7 @@ The **enviroment hypotheses** are:
 
 - The person position is constant throughout the entire robot operation.
 
-# Video of the Program
+# Video 
 https://youtu.be/R2qErgSNla4
 
 # Final Report 
